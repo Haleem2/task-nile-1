@@ -13,4 +13,4 @@ $authenticate = new Method();
 $parameters = json_decode(file_get_contents("php://input"), true);
 $authenticate->setUserName($parameters['username']);
 $authenticate->setPass($parameters['password']);
-$data = $authenticate->Creds();
+$data = $authenticate->Creds(); 
