@@ -8,11 +8,9 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Credentials: true");
 header('Content-Type: application/json');
 
-  include 'methods.php';
-  $authenticate = new Method();
-  $parameters = json_decode(file_get_contents("php://input"), true);
-  $authenticate->setUserName($parameters['username']);
-  $authenticate->setPass($parameters['password']);
-  $data = $authenticate->Creds();
-  
-
+include 'methods.php';
+$authenticate = new Method();
+$parameters = json_decode(file_get_contents("php://input"), true);
+$authenticate->setUserName($parameters['username']);
+$authenticate->setPass($parameters['password']);
+$data = $authenticate->Creds();
